@@ -1,0 +1,142 @@
+base_task:
+  description: >
+    Analyze the following content and prepare a comprehensive indian legal draft: {topic}
+    Consider current regulations, best practices, and ensure all relevant indian legal aspects
+    are properly formatted and structured.
+  expected_output: >
+    A structured initial legal draft document containing:
+    - Proper indian legal formatting and structure
+    - Use Mogha format
+    - Clear identification of parties
+    - Relevant indian legal clauses and provisions
+    - Required indian legal terminology
+    - Any necessary declarations or attestations
+  agent: base_agent
+
+mogha_task:
+  description: >
+    Review the draft and transform it into a final, legally-compliant document following best indian legal practices.
+    Ensure all indian legal requirements are met and the document is ready for official use in indian courts.
+  expected_output: >
+    A final, legally-ready document that:
+    - Follows proper indian legal formatting
+    - Contains all required indian legal elements
+    - Is properly structured
+    - Is ready for immediate legal use or filing in indian courts
+    - Includes any required attestation clauses or signature blocks
+  agent: mogha_agent
+
+research_tasks:
+  name: "Indian Legal Research and Document Preparation"
+  description: >
+    Comprehensive legal research within Indian jurisdiction followed by preparation 
+    of court-ready documents based on research findings
+
+  legal_research:
+    case_law_analysis:
+      - Search Supreme Court and High Court judgments
+      - Analyze relevant precedents from Indian courts
+      - Review latest judicial interpretations
+      - Document ratio decidendi of key cases
+      - Track judgment evolution on the subject
+
+    statutory_research:
+      - Identify applicable Indian laws and regulations
+      - Research relevant sections and provisions
+      - Check latest amendments and notifications
+      - Review parliamentary debates if relevant
+      - Analyze statutory interpretations
+
+    procedural_research:
+      - Study applicable court rules and procedures
+      - Research limitation periods
+      - Identify jurisdictional requirements
+      - Review filing procedures
+      - Check court fees and stamp duty requirements
+
+    secondary_research:
+      - Review legal commentaries by Indian authors
+      - Analyze law commission reports
+      - Study academic articles and journals
+      - Check bar council guidelines
+      - Review legal treatises
+
+  research_sources:
+    primary_sources:
+      - Official Gazette notifications
+      - Court websites
+      - Law commission reports
+      - Academic publications
+      - Legal journals and reviews
+    
+    secondary_sources:
+      - Legal journals and reviews
+      - Commentary books
+      - Legal databases
+      - Bare Acts
+      - Indian Kanoon
+      - SCC Online
+      - Manupatra
+    
+
+  document_preparation:
+    template_research:
+      - Identify authoritative document templates from Indian courts
+      - Research Mogha's Manual and other standard legal drafting guides
+      - Analyze court-specific template requirements
+      - Document state-wise variations in formats
+      - Compile standard clauses and attestation requirements
+
+    document_structure:
+      - Title and cause title formatting
+      - Party details and description format
+      - Pleading body structure
+      - Prayer clause formatting
+      - Verification and attestation blocks
+      - Exhibit and annexure formatting
+      - Signature block requirements
+      - Advocate details formatting
+
+    content_requirements:
+      - Mandatory declarations and affirmations
+      - Required legal phrases and terminology
+      - Standard clauses by document type
+      - Jurisdiction-specific requirements
+      - Language and translation requirements
+
+  research_output:
+    legal_analysis:
+      - Summary of relevant laws and sections
+      - Analysis of applicable precedents
+      - Key legal principles identified
+      - Jurisdiction-specific requirements
+      - Potential legal challenges
+      - Supporting case citations
+      - Statutory references
+
+    document_components:
+      - Legal grounds based on research
+      - Cited precedents and authorities
+      - Relevant statutory provisions
+      - Supporting evidence requirements
+      - Counter-argument considerations
+      - Jurisdiction establishment
+      - Relief sought based on precedents
+
+  success_criteria:
+    research_quality:
+      - Comprehensive coverage of relevant laws
+      - Up-to-date legal positions cited
+      - Proper citation of authorities
+      - Clear legal reasoning
+      - Strong precedent support
+      - Jurisdiction-specific compliance
+
+    document_quality:
+      - Research findings properly incorporated
+      - Accurate legal citations
+      - Strong legal arguments
+      - Proper formatting and structure
+      - Court-ready presentation
+      - Complete supporting documentation
+  agent: research_agent

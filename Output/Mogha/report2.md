@@ -1,0 +1,1 @@
+{court name} {unning} {place} {date} {month} {year} {name of affiant} {abode of affiant} {occupation of affiant} {affiant's identification if necessary} {affiant's proof of document identity if necessary} {incorrect document identity proof if necessary} {proof of willingness to provide further details}
