@@ -1,0 +1,2 @@
+requires-python = ">=3.10,<=3.13"
+crewai[tools]>=0.80.0,<1.0.0
